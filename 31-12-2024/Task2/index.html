@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task#2</title>
+
+    <style>
+        #exerciseOne{
+            width: 25%;
+            height: 50px;
+            font-size: 1.2rem;
+            font-weight: bolder;
+            text-align: center;
+            align-content: center;
+            background-color: pink;
+            border: 3px solid palevioletred;
+        }
+
+        #text{
+            width: 50%;
+            height: 100px;
+            font-size: 20px;
+            text-align: center;
+            align-content: center;
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!--Exercise #1-->
+    <h1>Exercise #1</h1>
+    <div id="exerciseOne" onmouseover = "sayHello()" onmouseout="askQuestion()">Can I Help You?</div>
+
+    <br><hr><br>
+
+    <!--Exercise #2-->
+    <h1>Exercise #2</h1>
+    <select id="fontFamily" onchange="textStyle()">
+        <option selected>Select a Font Style</option>
+        <option value="timesNewRoman">Times New Roman</option>
+        <option value="fantasy">Fantasy</option>
+    </select>
+
+    <select id="fontSize" onchange="textStyle()">
+        <option selected>Select a Font Size</option>
+        <option value="10px">10px</option>
+        <option value="15px">15px</option>
+    </select>
+
+    <select id="fontColor" onchange="textStyle()">
+        <option value="black" selected>Select a Font Color</option>
+        <option value="pink">Pink</option>
+        <option value="Purple">Purple</option>
+    </select>
+
+    <label><input type="checkbox" name="textStyle" value="italic" id="italic" onchange="textStyle()">Italic</label>
+    <label><input type="checkbox" name="textStyle" value="bold" id="bold" onchange="textStyle()">Bold</label>
+    <label><input type="checkbox" name="textStyle" value="underline" id="underline" onchange="textStyle()">Underline</label><br><br>
+    <div id="text">Hello This is Rahaf The Developer •ᴗ•</div>
+
+    <script src="JS.js"></script>
+</body>
+</html>
