@@ -23,7 +23,7 @@ calculateZakat(350, 59.8);
 
 let arr = [ 1, 7, 9, 45 ]
 
- ["Str" "alex","moh", 'the','fox', 'over', 'lazy', 'dog' ]
+ ["Str", "alex","moh", 'the','fox', 'over', 'lazy', 'dog' ]
 
  */
 
@@ -115,7 +115,7 @@ document.write("<hr><br>");
 document.write("Problem#9 <br><br>");
 
 var sortArray = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
-sortArray.sort();
+sortArray.sort((x, y) => x - y);
 document.write(sortArray);
 
 document.write("<hr><br>");
@@ -141,11 +141,11 @@ document.write("<hr><br>");
 //Problem#11
 document.write("Problem#11 <br><br>");
 
-for (i = 1 ; i <= 8; i++){
-    for(j=1; j<=i; j++){
-        document.write(j + " ");
-    }
-    document.write("<br>");
+for (i = 1; i <= 8; i++) {
+  for (j = 1; j <= i; j++) {
+    document.write(j + " ");
+  }
+  document.write("<br>");
 }
 
 document.write("<hr><br>");
@@ -155,15 +155,48 @@ document.write("Problem#12 <br><br>");
 
 let number;
 
-function factorial(number){
-    if (number == 0){
-        return 1;
-    }
-    for (i=number-1 ; i>0; i--){
-        number *= i;
-    }
-    return number;
+function factorial(number) {
+  if (number == 0) {
+    return 1;
+  }
+  for (i = number - 1; i > 0; i--) {
+    number *= i;
+  }
+  return number;
 }
 
 number = 5;
 document.write("Factorial of " + number + "= " + factorial(number));
+
+// document.write("<hr><br>");
+//
+// function findFactorial(number){
+//     if (number == 0){
+//         return document.write("Factorial of " + number + "= " + 1);
+//     }
+//     let factorial = number;
+//     for (i=factorial-1 ; i>0; i--){
+//       factorial *= i;
+//     }
+//     return document.write("Factorial of " + number + "= " + factorial);
+// }
+//
+// findFactorial(5);
+
+document.write("<hr><br>");
+
+function findOddBetween(num1, num2) {
+  let fromNum, toNum;
+  if (num1 > num2) {
+    fromNum = num2;
+    toNum = num1;
+  } else {
+    fromNum = num1;
+    toNum = num2;
+  }
+  for (let i = fromNum; i <= toNum; i++) {
+    if (i % 2 != 0) document.write(i + " ");
+  }
+}
+
+findOddBetween(2, 15);
