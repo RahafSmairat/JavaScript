@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task#4 Problem#2</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: plum;
+            padding: 10px 50px 10px 50px;
+        }
+        
+        .navLinks a {
+            margin: 10px;
+        }
+
+        .navBtn {
+            display: none;
+        }
+
+        @media (max-width: 426px) {
+            .navBtn {
+                display: inline;
+                position: fixed;
+                right: 10px;
+                top: 10px;
+            }
+
+            .navLinks {
+                display: none;
+            }
+
+            .navLinks.responsiveNav {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <div>Logo</div>
+        <button class="navBtn" onclick="showNav()"><img src="menu-bar.png"></button>
+        <div class="navLinks">
+            <a>Home</a>
+            <a>Services</a>
+            <a>Contact</a>
+            <a>About</a>
+        </div>
+    </nav>
+
+    <h1>Responsive Navbar</h1>
+
+    <script>
+
+        let navBtn = document.querySelector('.navBtn'),
+            navLinks = document.querySelector('.navLinks');
+
+        function showNav() {
+            if (navLinks.classList.contains('responsiveNav')) {
+                navLinks.classList.remove('responsiveNav');
+            } else {
+                navLinks.classList.add('responsiveNav');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

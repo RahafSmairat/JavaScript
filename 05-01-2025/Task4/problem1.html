@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task#4 Problem#1</title>
+</head>
+
+<body>
+
+    <h1>Set Form Data To Local Storage</h1>
+    <form id="taskForm" onsubmit="setValues(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age"><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender"><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date"><br><br>
+
+        <label for="image">Upload Your Image:</label>
+        <input type="file" id="image"><br><br>
+        <hr>
+        <label for="description">Description:</label>
+        <input type="text" id="description"><br><br>
+
+        <label for="major">Major and University:</label>
+        <input type="text" id="major"><br><br>
+
+        <label>Programming Languages:</label>
+        <label for="html">
+            <input type="checkbox" id="html">HTML
+        </label>
+        <label for="css">
+            <input type="checkbox" id="css">CSS
+        </label>
+        <label for="js">
+            <input type="checkbox" id="js">JavaScript
+        </label>
+        <hr>
+        <label for="siblingsNum">Siblings Number:</label>
+        <input type="text" id="siblingsNum"><br><br>
+        <label for="siblingsDes">Description of Siblings:</label>
+        <input type="text" id="siblingsDes"><br><br>
+
+        <button type="submit" id="submit">Submit</button>
+    </form><br><br><br><hr>
+
+    <h1>Get Form Data From Local Storage</h1>
+    <button type="btn" id="btn" onclick="getLocalItems()">Get Local</button><br><br>
+
+    <div id="nameOutput"></div>
+    <div id="ageOutput"></div>
+    <div id="genderOutput"></div>
+    <div id="dateOutput"></div>
+    <div id="imageOutput"></div>
+    <div id="descriptionOutput"></div>
+    <div id="majorOutput"></div>
+    <div id="programmingLanguagesOutput"></div>
+    <div id="siblingsNumOutput"></div>
+    <div id="siblingsDesOutput"></div>
+
+
+    <script src="problem1.js"></script>
+</body>
+
+</html>
