@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task#4 Problem#2</title>
+
+    <style>
+        #flagImg img{
+            width: 50%;;
+        }
+    </style>
+</head>
+<body>
+    <select id="flags">
+        <option selected>Choose a flag</option>
+        <option value="jordan">Jordan</option>
+        <option value="palastine">Palastine</option>
+        <option value="lebanon">Lebanon</option>
+        <option value="kuwait">Kuwait</option>
+    </select>
+
+    <br><br><br>
+    <div id="flagImg"></div>
+
+    <script>
+
+        let flags = document.getElementById("flags");
+
+        flags.addEventListener('change',showFlag);
+
+        function showFlag(){
+            switch(flags.value){
+                case "jordan":
+                document.getElementById("flagImg").innerHTML = `<img src="jordan.jpg">`;
+                break;
+                case "palastine":
+                document.getElementById("flagImg").innerHTML = `<img src="Flag_of_Palestine.svg.png">`;
+                break;
+                case "lebanon":
+                document.getElementById("flagImg").innerHTML = `<img src="lebanon.jpg">`;
+                break;
+                case "kuwait":
+                document.getElementById("flagImg").innerHTML = `<img src="kuwait.jpg">`;
+                break;
+                default:
+                document.getElementById("flagImg").innerHTML = ``;
+                break;
+            }
+        }
+        
+    </script>
+</body>
+</html>

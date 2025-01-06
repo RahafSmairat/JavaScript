@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task#4 Problem#4</title>
+    <style>
+        div{
+            width: 100%;
+            height: 500px;
+        }
+        .pink{
+            background-color: pink;
+        }
+        .blue{
+            background-color: cornflowerblue;
+        }
+        .plum{
+            background-color: plum;
+        }
+        img{
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="pink"></div>
+    <div class="blue"></div>
+    <div class="plum"></div>
+    <img src="up-arrow.png" id="goHome">
+
+    <script>
+        let homeBtn = document.getElementById("goHome");
+        homeBtn.addEventListener('click',goHome);
+
+        function goHome(){
+            window.scrollTo({top:0, behavior:"smooth"});
+        }
+    </script>
+</body>
+</html>
