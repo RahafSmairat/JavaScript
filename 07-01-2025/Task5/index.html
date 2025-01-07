@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+
+    <style>
+        p {
+            display: inline;
+            color: red;
+            margin-left: 20px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <form>
+        <label for="fName" id="fo">Enter First Name</label><br>
+        <input type="text" id="fName" oninput="validateName(this,'fNameError')">
+        <p id="fNameError"></p>
+        <br><br>
+
+        <label for="lName">Enter Last Name</label><br>
+        <input type="text" id="lName" oninput="validateName(this,'lNameError')">
+        <p id="lNameError"></p>
+        <br><br>
+
+        <label for="birthDate">Enter Your Birth Date</label><br>
+        <input type="text" id="birthDate" oninput="validateDate()">
+        <p id="birthDateError"></p>
+        <br><br>
+
+        <label for="email">Enter Your Email</label><br>
+        <input type="email" id="email" oninput="validateEmail()">
+        <p id="emailError"></p>
+        <br><br>
+
+        <label for="confirmEmail">Confirm Email</label><br>
+        <input type="email" id="confirmEmail"
+            oninput="match(this,document.getElementById('email'),'confirmEmailError')">
+        <p id="confirmEmailError"></p>
+        <br><br>
+
+        <label for="password">Enter Password</label><br>
+        <input type="password" id="password" oninput="validatePassword()">
+        <p id="passwordError"></p>
+        <br><br>
+
+        <label for="confirmPass">Confirm the password</label><br>
+        <input type="password" id="confirmPass"
+            oninput="match(this,document.getElementById('password'),'confirmPassError')">
+        <p id="confirmPassError"></p>
+        <br><br>
+    </form>
+
+    <script src="javaScript.js"></script>
+</body>
+
+</html>
