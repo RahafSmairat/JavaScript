@@ -1,0 +1,39 @@
+#jsonCardsContainer div {
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: plum;
+  padding: 20px;
+}
+
+#apiCardsContainer div {
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: pink;
+  padding: 20px;
+}
+
+#jsonCardsContainer,
+#apiCardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+#jsonDisplayBtn {
+  background-color: plum;
+  padding: 5px;
+}
+#jsonDisplayBtn:hover {
+  background-color: purple;
+  color: white;
+}
+
+#apiDisplayBtn {
+  background-color: pink;
+  padding: 5px;
+}
+#apiDisplayBtn:hover {
+  background-color: palevioletred;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
