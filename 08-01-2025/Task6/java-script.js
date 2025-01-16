@@ -5,10 +5,10 @@
                 .then(data => {
                     for (const index in data) {
                         const userCard = document.createElement('div');
-                        userCard.innerHTML = `Name: ${data[index].userName} <br><br>
-                                          Age: ${data[index].age} <br><br>
-                                          Email: ${data[index].email} <br><br>
-                                          Profission: ${data[index].profession}`;
+                        userCard.innerHTML = `<b>Name:</b> ${data[index].userName} <br><br>
+                                          <b>Age:</b> ${data[index].age} <br><br>
+                                          <b>Email:</b> ${data[index].email} <br><br>
+                                          <b>Profission:</b> ${data[index].profession}`;
                         jsonCardsContainer.appendChild(userCard);
                     }
                 })
@@ -21,10 +21,10 @@
             console.log(data);
             for (const index in data) {
                 const userCard = document.createElement('div');
-                userCard.innerHTML = `Name: ${data[index].userName} <br><br>
-                                          Age: ${data[index].age} <br><br>
-                                          Email: ${data[index].email} <br><br>
-                                          Profission: ${data[index].profession}`;
+                userCard.innerHTML = `<b>Name:</b> ${data[index].userName} <br><br>
+                                          <b>Age:</b> ${data[index].age} <br><br>
+                                          <b>Email:</b> ${data[index].email} <br><br>
+                                          <b>Profission:</b> ${data[index].profession}`;
                 apiCardsContainer.appendChild(userCard);
             }
         }
